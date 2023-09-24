@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS SortRequests(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    id DATE
+);
+
+CREATE TABLE IF NOT EXISTS BubbleValues(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    weight INT,
+    request_id BIGINT,
+    FOREIGN KEY (request_id) REFERENCES SortRequest(id)
+)
