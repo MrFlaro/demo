@@ -27,4 +27,6 @@ class BubbleService(
         repository.findById(id).ifPresent({value -> dto = value.toDTO()})
         return dto
     }
+
+    fun countTotal() = repository.count()  
 }

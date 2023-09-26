@@ -15,5 +15,5 @@ abstract class EntityBase : Persistable<Long> {
     
     override fun getId() = id
 
-    override fun isNew() = version == null
+    override fun isNew() = version != null
 }
